@@ -13,4 +13,13 @@ export class AppComponent {
     this.newTask = '';
     console.log(this.taskList);
   }
+
+  remove(task: string) {
+    this.taskList = this.taskList.filter(e => e !== task);
+    console.log(this.taskList);
+  }
+
+  done(task: string) {
+
+  }
 }

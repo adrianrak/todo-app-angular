@@ -9,7 +9,7 @@
   <div class="container">
     <div>
       <ul>
-        <li *ngFor="let task of taskList">
+        <li *ngFor="let task of tasksList">
           {{task}}
           <button (click)="remove(task)">Remove</button>
           <button (click)="done(task)">Done</button>
@@ -17,7 +17,11 @@
       </ul>
     </div>
     <div>
-      Done
+      <ul>
+        <li *ngFor="let task of tasksDoneList">
+          {{task}}
+        </li>
+      </ul>
     </div>
   </div>
 </div>

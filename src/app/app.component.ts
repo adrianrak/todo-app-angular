@@ -7,19 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newTask: string;
-  taskList: Array<string> = [];
+  tasksList: Array<string> = [];
+  tasksDoneList: Array<string> = [];
+
   add() {
-    this.taskList.push(this.newTask);
+    this.tasksList.push(this.newTask);
     this.newTask = '';
-    console.log(this.taskList);
+    console.log(this.tasksList);
   }
 
   remove(task: string) {
-    this.taskList = this.taskList.filter(e => e !== task);
-    console.log(this.taskList);
+    this.tasksList = this.tasksList.filter(e => e !== task);
+    console.log(this.tasksList);
   }
 
   done(task: string) {
-
+    this.tasksDoneList.push(task);
+    this.remove(task);
   }
 }

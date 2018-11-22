@@ -3,10 +3,7 @@
     <h1>{{title | uppercase }}</h1>
   </div>
   <div class="container">
-    <div>
-      <input [(ngModel)]="newTask">
-      <button (click)="add()">Add</button>
-    </div>
+    <app-add-task (emitTask)="add($event)"></app-add-task>
   </div>
   <div class="container">
     <div>

@@ -11,13 +11,7 @@
       <app-todo-task [tasksList]="tasksList" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-todo-task>
     </div>
     <div>
-      <h4>Done</h4>
-      <p>Completed tasks: {{tasksDoneList.length}}</p>
-      <ul>
-        <li *ngFor="let task of tasksDoneList">
-          {{task}}
-        </li>
-      </ul>
+      <app-done-task [tasksDoneList]="tasksDoneList"></app-done-task>
     </div>
   </div>
 </div>

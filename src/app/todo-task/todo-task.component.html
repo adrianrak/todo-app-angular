@@ -2,8 +2,8 @@
   <ul>
     <li *ngFor="let task of tasksList">
       {{task}}
-      <button (click)="remove(task)">Remove</button>
-      <button (click)="done(task)">Done</button>
+      <button (click)="remove(task)" class="btn btn-danger">Remove</button>
+      <button (click)="done(task)" class="btn btn-success">Done</button>
     </li>
   </ul>
 </ng-container>

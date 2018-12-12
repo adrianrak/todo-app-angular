@@ -1,7 +1,7 @@
 <h4>Done</h4>
 <p>Completed tasks: {{tasksDoneList.length}}</p>
 <ul>
-  <li appChecked *ngFor="let task of tasksDoneList">
+  <li appChecked appDate [date]="task.end" *ngFor="let task of tasksDoneList">
     {{task.name}}
   </li>
 </ul>

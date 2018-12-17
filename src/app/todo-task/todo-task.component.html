@@ -1,7 +1,7 @@
 <ng-container *ngIf="tasksList.length > 0; else notTask">
   <ul>
-    <li appDate [date]="task.created" *ngFor="let task of tasksList">
-      {{task.name}}
+    <li appDate [date]="task.created" *ngFor="let task of tasksList | sortName">
+      {{task.name | transformTask: '!'}}
       <button (click)="remove(task)" class="btn btn-danger">Remove</button>
       <button (click)="done(task)" class="btn btn-success">Done</button>
     </li>
